@@ -50,7 +50,7 @@ test('Can we get email from getEmail()', () => { // 7th test for using getEmail(
 
 test('Can we get role from getRole()', () => { // 8th test for using getRole() which will b
     const role = 'Employee'
-    const employee = new Employee('', 6, role)
+    const employee = new Employee(role)
 
-    expect(employee.getEmail()).toBe(role)
+    expect(employee.getRole()).toBe(role)
 });
