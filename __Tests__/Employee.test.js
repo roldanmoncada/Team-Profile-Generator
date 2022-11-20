@@ -33,16 +33,16 @@ test('Can we get name from getName()', () => { // 5th test that checks if we can
     expect(employee.getName()).toBe(username)
 })
 
-test('Can we get ID from getId()', () => { // 6th test that checks if we can use getId() to receive the name parameter from the original Employee class. This isn't passing yet.
+test('Can we get ID from getId()', () => { // 6th test that checks if we can use getId() to receive the name parameter from the original Employee class. This is now passing. It wasn't earlier because I didn't correctly pass in the necessary parameters to the new Employee constant.
     const number = '44'
-    const employee = new Employee(number)
+    const employee = new Employee('Foo', number)
 
     expect(employee.getId()).toBe(number)
 })
 
 test('Can we get email from getEmail()', () => {
     const gmail = 'email@gmail.com'
-    const employee = new Employee(gmail)
+    const employee = new Employee('Foo', 1, gmail)
 
     expect(employee.getEmail()).toBe(gmail)
 })
