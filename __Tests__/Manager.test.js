@@ -5,7 +5,7 @@ test("Can be instantiated.", () => { // Creating the first to verify that the ne
     expect(typeof(employee)).toBe("object")
 });
 
-test("Can set the name from the constructor.", () => { // 2nd test that tests if we can call the name parameter from the original Engineer class within Engineer.js. It passes.
+test("Can set the name from the constructor.", () => { // 2nd test that tests if we can call the name parameter from the original Manager class within Manager.js. It passes.
     const name = "Roldan"
     const employee = new Manager(name)
 
@@ -47,7 +47,7 @@ test('Can we get email from getEmail()', () => { // 7th test for using getEmail(
     expect(employee.getEmail()).toBe(gmail)
 });
 
-test('Can we get github from getGithub()', () => { // 8th test for using getOFficeNumber()) to receive the GitHub parameter from the Manager class. This one is specific to this class and passes.
+test('Can we get the office number from getOfficeNumber()', () => { // 8th test for using getOFficeNumber()) to receive the officeNumber parameter from the Manager class. This one is specific to this class and passes.
     const officeNumber = 'foo'
     const employee = new Manager('Foo', 1, 'email@mail.com', officeNumber)
 
