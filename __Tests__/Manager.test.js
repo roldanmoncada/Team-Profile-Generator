@@ -26,37 +26,37 @@ test('Can set the email from the constructor', () => { // 4th test checking if w
     expect(employee.email).toBe(email)
 });
 
-// test('Can we get name from getName()', () => { // 5th test that checks if we can use the getName function to receive the name parameter from the Engineer class. This test passes.
-//     const username = 'Robert'
-//     const employee = new Engineer(username)
+test('Can we get name from getName()', () => { // 5th test that checks if we can use the getName function to receive the name parameter from the Manager class. This test passes.
+    const username = 'Robert'
+    const employee = new Manager(username)
 
-//     expect(employee.getName()).toBe(username)
-// });
+    expect(employee.getName()).toBe(username)
+});
 
-// test('Can we get ID from getId()', () => { // 6th test that checks if we can use getId() to receive the name parameter from the original Engineer class. This passes.
-//     const number = '44'
-//     const employee = new Engineer('Foo', number)
+test('Can we get ID from getId()', () => { // 6th test that checks if we can use getId() to receive the id parameter from the Manager class. This passes.
+    const number = '44'
+    const employee = new Manager('Foo', number)
 
-//     expect(employee.getId()).toBe(number)
-// });
+    expect(employee.getId()).toBe(number)
+});
 
-// test('Can we get email from getEmail()', () => { // 7th test for using getEmail() to receive the name parameter from the original Engineer class. This passes.
-//     const gmail = 'email@gmail.com'
-//     const employee = new Engineer('Foo', 1, gmail)
+test('Can we get email from getEmail()', () => { // 7th test for using getEmail() to receive the email parameter from the Manager class. This passes.
+    const gmail = 'email@gmail.com'
+    const employee = new Manager('Foo', 1, gmail)
 
-//     expect(employee.getEmail()).toBe(gmail)
-// });
+    expect(employee.getEmail()).toBe(gmail)
+});
 
-// test('Can we get github from getGithub()', () => { // 8th test for using getGitHub() to receive the GitHub parameter from the original Engineer class. This one is specific to this class and passes.
-//     const github = 'foo'
-//     const employee = new Engineer('Foo', 1, 'email@mail.com', github)
+test('Can we get github from getGithub()', () => { // 8th test for using getOFficeNumber()) to receive the GitHub parameter from the Manager class. This one is specific to this class and passes.
+    const officeNumber = 'foo'
+    const employee = new Manager('Foo', 1, 'email@mail.com', officeNumber)
 
-//     expect(employee.getGitHub()).toBe(github)
-// });
+    expect(employee.getOfficeNumber()).toBe(officeNumber)
+});
 
-// test('Can we get role from getRole()', () => { // 9th test for using getRole() which will be hardcoded to return 'Engineer'. This test passes.
-//     const role = 'Engineer'
-//     const employee = new Engineer(role)
+test('Can we get role from getRole()', () => { // 9th test for using getRole() which will be hardcoded to return 'Manager'. This test passes.
+    const role = 'Manager'
+    const employee = new Manager(role)
 
-//     expect(employee.getRole()).toBe(role)
-// });
+    expect(employee.getRole()).toBe(role)
+});
