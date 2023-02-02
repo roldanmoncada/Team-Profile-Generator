@@ -32,6 +32,22 @@ const generateTeam = teamData => {
         </div>
         `
     }
+    const generateIntern = internData => {
+        console.log(internData)
+        return `
+        <div>
+            <div>
+                <h1>${internData.getName()}</h1>
+                <h2>${internData.getRole()}</h2>
+            </div>
+            <ul>
+                <li>${internData.getId()}</li>
+                <li>${internData.getEmail()}</li>
+                <li>${internData.getSchool()}</li>
+            </ul>
+        </div>
+        `
+    }
     // <!--CONTINUE PATTERN FOR OTHER ROLES, SAME STRUCTURE AND ERYTHING-->
     const htmlData = []
     console.log(htmlData)
@@ -41,6 +57,10 @@ const generateTeam = teamData => {
 
     htmlData.push(teamData.filter(employee => employee.getRole() === "Engineer")
     .map(engineerData => generateEngineer(engineerData))
+    .join(''));
+
+    htmlData.push(teamData.filter(employee => employee.getRole() === "Intern")
+    .map(internData => generateEngineer(internData))
     .join(''));
     // <!--CONTINUE PATTERN FOR OTHER ROLES, SAME STRUCTURE AND ERYTHING-->
 

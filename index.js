@@ -105,7 +105,7 @@ function employeeMenu() {
             )
             teamMembers.push(engineer)
             teamIds.push(engineerAnswers.engineerId)
-            employeeMenu()
+            createTeams()
         })
     }
     function addIntern() {
@@ -139,7 +139,7 @@ function employeeMenu() {
             )
             teamMembers.push(engineer)
             teamIds.push(engineerAnswers.engineerId)
-            employeeMenu()
+            createTeams()
         })
     }
 
