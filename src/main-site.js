@@ -1,6 +1,7 @@
 // <!--Building out the main website's html and styling. There will be separate boilerplates for the inclusion of the different employee types.-->
 const generateTeam = teamData => {
     const generateManager = managerData => {
+        console.log(managerData)
         return `
         <div>
             <div>
@@ -17,17 +18,19 @@ const generateTeam = teamData => {
     } // remember to separate with comma!
     // <!--CONTINUE PATTERN FOR OTHER ROLES, SAME STRUCTURE AND ERYTHING-->
     const htmlData = []
+    console.log(htmlData)
 
-    htmlData.push(teamData).filter(employee => {
-        employee.getRole() === "Manager"
-    }).map(manager => {generateManager(manager)});
+    htmlData.push(teamData.filter(employee => employee.getRole() === "Manager")
+    .map(managerData => generateManager(managerData)));
 
-    htmlData.push(teamData).filter(employee => {
-        employee.getRole() === "Engineer"
-    }).map(engineer => {generateManager(engineer)});
+    // htmlData.push(teamData.filter(employee => employee.getRole() === "Engineer")
+    // .map(engineer => generateManager(engineer))
+    // .join('')
+    // );
     // <!--CONTINUE PATTERN FOR OTHER ROLES, SAME STRUCTURE AND ERYTHING-->
 
     return htmlData.join('')
+    console.log(teamData)
 }
 
 module.exports = teamData => {
