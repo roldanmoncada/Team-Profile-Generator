@@ -16,6 +16,22 @@ const generateTeam = teamData => {
         </div>
         `
     } // remember to separate with comma!
+    const generateEngineer = engineerData => {
+        console.log(engineerData)
+        return `
+        <div>
+            <div>
+                <h1>${engineerData.getName()}</h1>
+                <h2>${engineerData.getRole()}</h2>
+            </div>
+            <ul>
+                <li>${engineerData.getId()}</li>
+                <li>${engineerData.getEmail()}</li>
+                <li>${engineerData.getGithub()}</li>
+            </ul>
+        </div>
+        `
+    }
     // <!--CONTINUE PATTERN FOR OTHER ROLES, SAME STRUCTURE AND ERYTHING-->
     const htmlData = []
     console.log(htmlData)
@@ -23,10 +39,9 @@ const generateTeam = teamData => {
     htmlData.push(teamData.filter(employee => employee.getRole() === "Manager")
     .map(managerData => generateManager(managerData)));
 
-    // htmlData.push(teamData.filter(employee => employee.getRole() === "Engineer")
-    // .map(engineer => generateManager(engineer))
-    // .join('')
-    // );
+    htmlData.push(teamData.filter(employee => employee.getRole() === "Engineer")
+    .map(engineerData => generateEngineer(engineerData))
+    .join(''));
     // <!--CONTINUE PATTERN FOR OTHER ROLES, SAME STRUCTURE AND ERYTHING-->
 
     return htmlData.join('')

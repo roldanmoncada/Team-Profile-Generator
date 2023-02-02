@@ -75,10 +75,72 @@ function employeeMenu() {
     })
     }
     function addEngineer() {
-
+        inquirer.prompt([
+            {
+                type: 'input',
+                name: 'engineerName',
+                message: 'What is the name of your engineer?'
+            },
+            {
+                type: 'input',
+                name: 'engineerId',
+                message: 'What is the ID of your engineer?'
+            },
+            {
+                type: 'input',
+                name: 'engineerEmail',
+                message: 'What is the email of your engineer?'
+            },
+            {
+                type: 'input',
+                name: 'engineerGithub',
+                message: 'What is the GitHub username of your engineer?'
+            }
+        ]).then((engineerAnswers) => {
+            const engineer = new Engineer(
+                engineerAnswers.engineerName,
+                engineerAnswers.engineerId,
+                engineerAnswers.engineerEmail,
+                engineerAnswers.engineerGithub
+            )
+            teamMembers.push(engineer)
+            teamIds.push(engineerAnswers.engineerId)
+            employeeMenu()
+        })
     }
     function addIntern() {
-
+        inquirer.prompt([
+            {
+                type: 'input',
+                name: 'internName',
+                message: 'What is the name of your intern?'
+            },
+            {
+                type: 'input',
+                name: 'internId',
+                message: 'What is the ID of your intern?'
+            },
+            {
+                type: 'input',
+                name: 'internEmail',
+                message: 'What is the email of your intern?'
+            },
+            {
+                type: 'input',
+                name: 'internSchool',
+                message: 'Where did your intern go to school?'
+            }
+        ]).then((engineerAnswers) => {
+            const engineer = new Engineer(
+                engineerAnswers.engineerName,
+                engineerAnswers.engineerId,
+                engineerAnswers.engineerEmail,
+                engineerAnswers.engineerGithub
+            )
+            teamMembers.push(engineer)
+            teamIds.push(engineerAnswers.engineerId)
+            employeeMenu()
+        })
     }
 
     function buildEmployees() {
