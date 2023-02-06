@@ -130,15 +130,15 @@ function employeeMenu() {
                 name: 'internSchool',
                 message: 'Where did your intern go to school?'
             }
-        ]).then((engineerAnswers) => {
-            const engineer = new Engineer(
-                engineerAnswers.engineerName,
-                engineerAnswers.engineerId,
-                engineerAnswers.engineerEmail,
-                engineerAnswers.engineerGithub
+        ]).then((internAnswers) => {
+            const intern = new Intern(
+                internAnswers.internName,
+                internAnswers.internId,
+                internAnswers.internEmail,
+                internAnswers.internSchool
             )
-            teamMembers.push(engineer)
-            teamIds.push(engineerAnswers.engineerId)
+            teamMembers.push(intern)
+            teamIds.push(internAnswers.internId)
             createTeams()
         })
     }

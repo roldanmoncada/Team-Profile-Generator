@@ -27,7 +27,7 @@ const generateTeam = teamData => {
             <ul>
                 <li>${engineerData.getId()}</li>
                 <li>${engineerData.getEmail()}</li>
-                <li>${engineerData.getGithub()}</li>
+                <li>${engineerData.getGitHub()}</li>
             </ul>
         </div>
         `
@@ -41,8 +41,11 @@ const generateTeam = teamData => {
                 <h2>${internData.getRole()}</h2>
             </div>
             <ul>
+                <li>Intern ID:</li>
                 <li>${internData.getId()}</li>
+                <li>Intern email:</li>
                 <li>${internData.getEmail()}</li>
+                <li>Intern school:</li>
                 <li>${internData.getSchool()}</li>
             </ul>
         </div>
@@ -60,7 +63,7 @@ const generateTeam = teamData => {
     .join(''));
 
     htmlData.push(teamData.filter(employee => employee.getRole() === "Intern")
-    .map(internData => generateEngineer(internData))
+    .map(internData => generateIntern(internData))
     .join(''));
     // <!--CONTINUE PATTERN FOR OTHER ROLES, SAME STRUCTURE AND ERYTHING-->
 
