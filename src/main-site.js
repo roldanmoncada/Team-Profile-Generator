@@ -27,7 +27,7 @@ const generateTeam = teamData => {
             <ul>
                 <li>${engineerData.getId()}</li>
                 <li>${engineerData.getEmail()}</li>
-                <li>${engineerData.getGitHub()}</li>
+                <li><a href="https://github.com/${engineerData.getGitHub()}" target="_blank" rel="noopener noreferrer">${engineerData.getGitHub()}</a></li>
             </ul>
         </div>
         `
@@ -44,7 +44,7 @@ const generateTeam = teamData => {
                 <li>Intern ID:</li>
                 <li>${internData.getId()}</li>
                 <li>Intern email:</li>
-                <li>${internData.getEmail()}</li>
+                <li><a href="mailto:${internData.getEmail()}">${internData.getEmail()}</a></li>
                 <li>Intern school:</li>
                 <li>${internData.getSchool()}</li>
             </ul>
