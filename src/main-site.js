@@ -20,35 +20,37 @@ const generateTeam = teamData => {
     const generateEngineer = engineerData => {
         console.log(engineerData)
         return `
-        <div>
-            <div>
+        <div class="container d-flex flex-wrap justify-content-center">
+            <div class="card" style="width: 18rem;">
                 <h1>${engineerData.getName()}</h1>
                 <h2>${engineerData.getRole()}</h2>
-            </div>
-            <ul>
-                <li>${engineerData.getId()}</li>
-                <li>${engineerData.getEmail()}</li>
-                <li><a href="https://github.com/${engineerData.getGitHub()}" target="_blank" rel="noopener noreferrer">${engineerData.getGitHub()}</a></li>
+            
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">${engineerData.getId()}</li>
+                <li class="list-group-item">${engineerData.getEmail()}</li>
+                <li class="list-group-item"><a href="https://github.com/${engineerData.getGitHub()}" target="_blank" rel="noopener noreferrer">${engineerData.getGitHub()}</a></li>
             </ul>
+            </div>
         </div>
         `
     }
     const generateIntern = internData => {
         console.log(internData)
         return `
-        <div>
-            <div>
-                <h1>${internData.getName()}</h1>
-                <h2>${internData.getRole()}</h2>
-            </div>
-            <ul>
-                <li>Intern ID:</li>
-                <li>${internData.getId()}</li>
-                <li>Intern email:</li>
-                <li><a href="mailto:${internData.getEmail()}">${internData.getEmail()}</a></li>
-                <li>Intern school:</li>
-                <li>${internData.getSchool()}</li>
+        <div "container d-flex flex-wrap justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <h1 class="card-title bg-dark text-light mb-0 text-center">${internData.getName()}</h1>
+                <h2 class="card-title bg-dark text-light mb-0 text-center">${internData.getRole()}</h2>
+            
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Intern ID:</li>
+                <li class="list-group-item">${internData.getId()}</li>
+                <li class="list-group-item">Intern email:</li>
+                <li class="list-group-item"><a href="mailto:${internData.getEmail()}">${internData.getEmail()}</a></li>
+                <li class="list-group-item">Intern school:</li>
+                <li class="list-group-item">${internData.getSchool()}</li>
             </ul>
+            </div>
         </div>
         `
     }
@@ -86,8 +88,8 @@ module.exports = teamData => {
 </head>
 <body>
     <div>
-        <nav class="navbar mx-auto navbar-light bg-light">
-            <h1 class="navbar-brand mb-0 h1">My New Team</h1>
+        <nav class="navbar navbar-dark bg-dark">
+            <h1 class="navbar-brand mb-0 h1 text-center">My New Team</h1>
         </nav>
         <div>
             <div class="container-fluid">
