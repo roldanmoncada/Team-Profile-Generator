@@ -5,13 +5,13 @@ const generateTeam = teamData => {
         return `
         <div class="container d-flex flex-wrap justify-content-center">
             <div class="card" style="width: 18rem;">
-                <h1>${managerData.getName()}</h1>
-                <h2>${managerData.getRole()}</h2>
+                <h1 class="card-title bg-dark text-light mb-0 text-center">${managerData.getName()}</h1>
+                <h2 class="card-title bg-dark text-light mb-0 text-center">Role: ${managerData.getRole()}</h2>
             
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">${managerData.getId()}</li>
-                <li class="list-group-item">${managerData.getEmail()}</li>
-                <li class="list-group-item">${managerData.getOfficeNumber()}</li>
+                <li class="list-group-item">Manager ID: ${managerData.getId()}</li>
+                <li class="list-group-item">Email: ${managerData.getEmail()}</li>
+                <li class="list-group-item">Office Number: ${managerData.getOfficeNumber()}</li>
             </ul>
             </div>
         </div>
@@ -22,13 +22,13 @@ const generateTeam = teamData => {
         return `
         <div class="container d-flex flex-wrap justify-content-center">
             <div class="card" style="width: 18rem;">
-                <h1>${engineerData.getName()}</h1>
-                <h2>${engineerData.getRole()}</h2>
+                <h1 class="card-title bg-dark text-light mb-0 text-center">${engineerData.getName()}</h1>
+                <h2 class="card-title bg-dark text-light mb-0 text-center">Role: ${engineerData.getRole()}</h2>
             
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">${engineerData.getId()}</li>
-                <li class="list-group-item">${engineerData.getEmail()}</li>
-                <li class="list-group-item"><a href="https://github.com/${engineerData.getGitHub()}" target="_blank" rel="noopener noreferrer">${engineerData.getGitHub()}</a></li>
+                <li class="list-group-item">Engineer ID: ${engineerData.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${engineerData.getEmail()}">${engineerData.getEmail()}</a></li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/${engineerData.getGitHub()}" target="_blank" rel="noopener noreferrer">${engineerData.getGitHub()}</a></li>
             </ul>
             </div>
         </div>
@@ -37,18 +37,15 @@ const generateTeam = teamData => {
     const generateIntern = internData => {
         console.log(internData)
         return `
-        <div "container d-flex flex-wrap justify-content-center">
+        <div class="container d-flex flex-wrap justify-content-center">
             <div class="card" style="width: 18rem;">
                 <h1 class="card-title bg-dark text-light mb-0 text-center">${internData.getName()}</h1>
-                <h2 class="card-title bg-dark text-light mb-0 text-center">${internData.getRole()}</h2>
+                <h2 class="card-title bg-dark text-light mb-0 text-center">Role: ${internData.getRole()}</h2>
             
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Intern ID:</li>
-                <li class="list-group-item">${internData.getId()}</li>
-                <li class="list-group-item">Intern email:</li>
-                <li class="list-group-item"><a href="mailto:${internData.getEmail()}">${internData.getEmail()}</a></li>
-                <li class="list-group-item">Intern school:</li>
-                <li class="list-group-item">${internData.getSchool()}</li>
+                <li class="list-group-item">Intern ID: ${internData.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${internData.getEmail()}">${internData.getEmail()}</a></li>
+                <li class="list-group-item">School: ${internData.getSchool()}</li>
             </ul>
             </div>
         </div>
@@ -92,7 +89,7 @@ module.exports = teamData => {
             <h1 class="navbar-brand mb-0 h1 text-center">My New Team</h1>
         </nav>
         <div>
-            <div class="container-fluid">
+            <div>
                 ${generateTeam(teamData)}
             </div>
         </div>

@@ -2,7 +2,7 @@
 
 ## Description:
 
-This application is a backend API for a web-based social network where users can share thoughts, react to friends' thoughts, and even create a friends list. This was done by using Express.js, Node.js, and MongoDB in tandem with Mongoose.
+This application is a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each team member.
 
 The functionality of this application will be displayed via video clip as requested by the assignment's Grading Requirements.
 
@@ -46,4 +46,4 @@ This application will not be deployed and requires a video guide so I will not b
 
 Here is a link to my GitHub [repo!](https://github.com/roldanmoncada/Team-Profile-Generator)
 
-Here is the walkthrough [video!](https://drive.google.com/file/d/1QgaVHV01L3fxb19GTPUpMrUQb1VE08la/view)
+Here is the walkthrough [video!](PLACEHOLDERTEXT)
