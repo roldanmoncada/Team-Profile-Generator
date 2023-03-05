@@ -2,7 +2,7 @@
 
 ## Description:
 
-This application is a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each team member.
+This application is a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each team member. There are tests to be run and they are accessible through the `__Tests__` folder. Run the test files by inputting `npm run test` into your command line. You can run the app itself by inputting `node index.js` into your command line.
 
 The functionality of this application will be displayed via video clip as requested by the assignment's Grading Requirements.
 
@@ -46,4 +46,4 @@ This application will not be deployed and requires a video guide so I will not b
 
 Here is a link to my GitHub [repo!](https://github.com/roldanmoncada/Team-Profile-Generator)
 
-Here is the walkthrough [video!](PLACEHOLDERTEXT)
+Here is the walkthrough [video!](https://drive.google.com/file/d/1EFDHJbnVMPCEnawpLevgUwN2Voj6VAhG/view)
